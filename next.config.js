@@ -1,0 +1,33 @@
+const debug = process.env.NODE_ENV !== "production";
+
+module.exports = {
+  exportPathMap: function () {
+    return {
+      "/": { page: "/" },
+      "/projects": { page: "/projects" },
+      "/resume": { page: "/resume" },
+      "/contact": { page: "/contact" },
+      "/contribute": { page: "/contribute" },
+    }
+  },
+
+  assetPrefix: '',
+  webpack: (config, { dev }) => {
+    config.module.rules = config.module.rules.map(rule => {
+      if(rule.loader === 'babel-loader') {
+        rule.options.cacheDirectory = false
+      }
+      return rule
+    })
+    return config
+  }
+  
+  /*,
+  webpackDevMiddleware: (config) => {
+    // Perform customizations to webpack dev middleware config
+    // console.log('webpackDevMiddleware');
+    // console.log(config);
+    // Important: return the modified config
+    return config
+  }, */
+}

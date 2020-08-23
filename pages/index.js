@@ -1,63 +1,66 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import Link from 'next/link'
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>Zachary Pelkey</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Welcome to <a href="#">Pelkey.io!</a>
         </h1>
 
         <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
+          The Homepage of Zachary Pelkey
+          <code className={styles.code}>and all things code.</code>
         </p>
 
         <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+          <Link href="/projects" as={process.env.BACKEND_URL + '/projects'} >
+            <a className={styles.card}>
+              <h3>Projects &rarr;</h3>
+              <p>Check out some of the cool projects that I've been a part of.</p>
+            </a>
+          </Link>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+          <Link href="/resume" as={process.env.BACKEND_URL + '/resume'} >
+            <a className={styles.card}>
+              <h3>Resume &rarr;</h3>
+              <p>Take a look at my track record of building cool things.</p>
+            </a>
+          </Link>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+          <Link href="/contact" as={process.env.BACKEND_URL + '/contact'} >
+            <a className={styles.card} >
+              <h3>Contact Me &rarr;</h3>
+              <p>Contact me with business inquiries or just to say hello.</p>
+            </a>
+          </Link>
 
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+          <Link href="/contribute" as={process.env.BACKEND_URL + '/contribute'} >
+            <a className={styles.card}>
+              <h3>Contribute&rarr;</h3>
+              <p>
+                Always looking for support on projects. 
+              </p>
+            </a>
+          </Link>
         </div>
       </main>
 
       <footer className={styles.footer}>
         <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          href="https://github.com/jiyuu-jin"
           target="_blank"
           rel="noopener noreferrer"
         >
           Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
+          Love and Coffee
         </a>
       </footer>
     </div>

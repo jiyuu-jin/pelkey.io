@@ -12,9 +12,9 @@ module.exports = {
   },
 
   assetPrefix: '',
-  webpack: (config: { module: { rules: any[]; }; }, { dev }: any) => {
+  webpack: (config, { dev }) => {
     config.module.rules = config.module.rules.map(rule => {
-      if (rule.loader === 'babel-loader') {
+      if(rule.loader === 'babel-loader') {
         rule.options.cacheDirectory = false
       }
       return rule

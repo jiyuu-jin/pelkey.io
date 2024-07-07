@@ -1,6 +1,6 @@
-import Head from 'next/head'
-import styles from './Home.module.css'
-import Link from 'next/link'
+import Head from 'next/head';
+import styles from './Home.module.css';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -23,7 +23,7 @@ export default function Home() {
         <div className={styles.grid}>
           <Link className={styles.card} href="/projects" as={process.env.BACKEND_URL + '/projects'} >
             <h3>Projects &rarr;</h3>
-            <p>Check out some of the cool projects that I've been a part of.</p>
+            <p>Check out some of the cool projects that I&apos;ve been a part of.</p>
           </Link>
 
           <Link className={styles.card} href="/resume" as={process.env.BACKEND_URL + '/resume'} >
@@ -56,5 +56,5 @@ export default function Home() {
         </a>
       </footer>
     </div>
-  )
+  );
 }

@@ -3,6 +3,7 @@ import styles from './Home.module.css';
 import Link from 'next/link';
 
 export default function Home() {
+  const githubUrl = "https://github.com/jiyuu-jin";
   return (
     <div className={styles.container}>
       <Head>
@@ -12,7 +13,12 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="#">Pelkey.io!</a>
+          Welcome to <a        
+            target="_blank"
+            rel="noopener noreferrer"
+            href={githubUrl}>
+              Pelkey.io!
+            </a>
         </h1>
 
         <p className={styles.description}>
@@ -51,8 +57,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
-          Love and Coffee
+          Powered by Love and Coffee
         </a>
       </footer>
     </div>

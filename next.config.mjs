@@ -1,7 +1,6 @@
-const debug = process.env.NODE_ENV !== "production";
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: 'export',
+};
 
-export default (phase, { defaultConfig }) => {
-  return {
-    assetPrefix: '',
-  }
-}
+export default nextConfig;

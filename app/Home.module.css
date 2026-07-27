@@ -105,6 +105,28 @@
   font-size: 1.5rem;
 }
 
+.cardMeta {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.15rem 0.6rem;
+  border: 1px solid var(--muted-border);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
+.backLink {
+  align-self: flex-start;
+  margin-bottom: 2rem;
+  color: var(--accent);
+  font-size: 0.95rem;
+}
+
+.backLink:hover {
+  text-decoration: underline;
+}
+
 .card p {
   margin: 0;
   font-size: 1.25rem;

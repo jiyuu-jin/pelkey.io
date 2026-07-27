@@ -27,22 +27,22 @@ export default function Home() {
         </p>
 
         <div className={styles.grid}>
-          <Link className={styles.card} href="/projects" as={process.env.BACKEND_URL + '/projects'} >
+          <Link className={styles.card} href="/projects" >
             <h3>Projects &rarr;</h3>
             <p>Check out some of the cool projects that I&apos;ve been a part of.</p>
           </Link>
 
-          <Link className={styles.card} href="/resume" as={process.env.BACKEND_URL + '/resume'} >
+          <Link className={styles.card} href="/resume" >
             <h3>Resume &rarr;</h3>
             <p>Take a look at my track record of building cool things.</p>
           </Link>
 
-          <Link className={styles.card} href="/contact" as={process.env.BACKEND_URL + '/contact'} >
+          <Link className={styles.card} href="/contact" >
             <h3>Contact Me &rarr;</h3>
             <p>Contact me with business inquiries or just to say hello.</p>
           </Link>
 
-          <Link className={styles.card} href="/contribute" as={process.env.BACKEND_URL + '/contribute'} >
+          <Link className={styles.card} href="/contribute" >
             <h3>Contribute&rarr;</h3>
             <p>
               Always looking for support on projects. 
